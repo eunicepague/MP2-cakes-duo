@@ -1,7 +1,7 @@
 import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
-import Shoes from "./views/Cakes/Pastries";
+import Pastries from "./views/Cakes/Pastries";
 
 const routes = [
   {
@@ -9,16 +9,16 @@ const routes = [
     element: <Home />,
   },
   {
-    path: "/",
+    path: "/about",
     element: <About />,
   },
   {
-    path: "/",
+    path: "/contact",
     element: <Contact />,
   },
   {
-    path: "/",
-    element: <Shoes />,
+    path: "/pastries",
+    element: <Pastries />,
   },
 ];
 

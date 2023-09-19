@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Shoes = () => {
-  return <div></div>;
+const Pastries = () => {
+  return <div>Pastries</div>;
 };
 
-export default Shoes;
+export default Pastries;
