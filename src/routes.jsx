@@ -1,23 +1,23 @@
-import Home from './views/Home';
-import About from './views/About';
-import Contact from './views/Contact';
-import Shoes from './views/Cakes';
+import Home from "./views/Home/Home";
+import About from "./views/About/About";
+import Contact from "./views/Contact/Contact";
+import Shoes from "./views/Cakes/Pastries";
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     element: <Home />,
   },
   {
-    path: '/',
+    path: "/",
     element: <About />,
   },
   {
-    path: '/',
+    path: "/",
     element: <Contact />,
   },
   {
-    path: '/',
+    path: "/",
     element: <Shoes />,
   },
 ];
