@@ -1,7 +1,7 @@
 import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
-import Shoes from './views/Shoes';
+import Shoes from './views/Cakes';
 
 const routes = [
   {
