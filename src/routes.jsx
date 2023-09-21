@@ -1,24 +1,27 @@
-import Home from './views/Home/Home';
-import About from './views/About/About';
-import Contact from './views/Contact/Contact';
-import Shoes from './views/Cakes/Cakes';
+
+
+import Home from "./views/Home/Home";
+import About from "./views/About/About";
+import Contact from "./views/Contact/Contact";
+import Pastries from "./views/Cakes/Pastries";
+
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     element: <Home />,
   },
   {
-    path: '/',
+    path: "/about",
     element: <About />,
   },
   {
-    path: '/',
+    path: "/contact",
     element: <Contact />,
   },
   {
-    path: '/',
-    element: <Shoes />,
+    path: "/pastries",
+    element: <Pastries />,
   },
 ];
 

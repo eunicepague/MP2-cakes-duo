@@ -1,3 +1,4 @@
+
 // import React from 'react';
 import Hero from './sections/Hero';
 import SectionOne from './sections/SectionOne';
@@ -13,6 +14,6 @@ const Home = () => {
       <AdvertisementOne />
     </>
   );
-};
+
 
 export default Home;

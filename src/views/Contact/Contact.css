@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Pacifico&family=Poiret+One&display=swap");
+
+section#contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 600px;
+  font-weight: 900;
+}
+section#contact .container .card {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(110, 106, 106);
+}
+section#contact .container .card .card-title {
+  color: white;
+}
+section#contact .container .card .card-subtitle {
+  color: white;
+}
+section#contact .container .card #floatingInput,
+#floatingTextarea2 {
+  border-radius: 20px;
+}
+section#contact .container .card button {
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  border-radius: 20px;
+}
