@@ -46,7 +46,7 @@
 
 .advertisementOne-button::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 0;
   width: 0;
   top: 0;

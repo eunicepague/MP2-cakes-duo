@@ -1,6 +1,7 @@
+/* --nag conflict din dito sa header-- */
 .container {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh;        --kinoment out ko muna tong height para lumiit ang header-- */
 }
 
 #s1-heading {

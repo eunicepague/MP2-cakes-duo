@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poiret+One&display=swap");
-
+header#navbar .container nav {
+  height: 20px;
+}
 header#navbar a {
   font-family: "Pacifico", cursive;
   color: white;
