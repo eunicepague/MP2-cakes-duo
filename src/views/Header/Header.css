@@ -15,3 +15,6 @@ header .btn {
   background-color: rgb(209, 77, 221);
   border-style: none;
 }
+header .btn a {
+  text-decoration: none;
+}
