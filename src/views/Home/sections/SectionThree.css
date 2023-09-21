@@ -1,0 +1,60 @@
+#s2-container {
+  max-width: 1300px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#s2-heading {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#s2-h1 {
+  font-weight: bold;
+}
+
+#s2-h6 {
+  font-style: italic;
+}
+
+#s2-buttons {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#s2-buttons button {
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+#s2-buttons button:hover {
+  background-color: #2b2b2b;
+  color: white;
+  transition: 0.3s;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  max-width: 1200px;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
