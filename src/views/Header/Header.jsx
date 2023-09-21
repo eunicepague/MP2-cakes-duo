@@ -6,10 +6,10 @@ import "./Header.css";
 const Header = () => {
   return (
     <header id="navbar">
-      <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top">
+      <Navbar expand="lg" bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Navbar
+            MilkBar
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -28,10 +28,10 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Button variant="light" className="btn me-3">
-              Log In
+              <Link to="/login">Log in</Link>
             </Button>
             <Button variant="light" className="btn">
-              Sign Up
+              <Link to="/signup">Sign up</Link>
             </Button>
           </Navbar.Collapse>
         </Container>

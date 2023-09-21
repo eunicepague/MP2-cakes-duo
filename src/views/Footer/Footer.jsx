@@ -1,24 +1,38 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Footer.css";
 const Footer = () => {
   return (
-    <Footer>
+    <footer>
       <Container>
         <Row>
           <Col>
             <h3>Quick Links</h3>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="cakes">Cakes</Link>
-            <Link to="/contacts">Contacts</Link>
+            <Link to="/pastries">Cakes</Link>
+            <Link to="/contact">Contacts</Link>
           </Col>
           <Col>
-            <h3></h3>
+            <h3>Social Media</h3>
+            <Link to=""></Link>
+            <Link to=""></Link>
           </Col>
-          <Col></Col>
+          <Col>
+            <Form>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Subscribe to our newsletter</Form.Label>
+                <Form.Control type="email" placeholder="Email Address" />
+              </Form.Group>
+            </Form>
+          </Col>
         </Row>
       </Container>
-    </Footer>
+      <p>&copy; 2023. All rights reserved.</p>
+    </footer>
   );
 };
 
