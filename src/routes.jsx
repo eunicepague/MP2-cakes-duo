@@ -1,9 +1,12 @@
+
+
 import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
 import Pastries from "./views/Cakes/Pastries";
 import Login from "./views/Login/Login";
 import Signup from "./views/Signup/Signup";
+
 
 const routes = [
   {
