@@ -13,6 +13,29 @@ const SectionThree = () => {
         </h5>
       </section>
 
+      <section id="s3-buttons-container">
+        <div id="s3-buttons">
+          <Col xs="auto">
+            <button className="mx-2">BARS AND BROWNIES</button>
+          </Col>
+          <Col xs="auto">
+            <button className="mx-2">CAKES AND CUPCAKES</button>
+          </Col>
+          <Col xs="auto">
+            <button className="mx-2">NO BAKE DESSERTS</button>
+          </Col>
+          <Col xs="auto">
+            <button className="mx-2">CHEESECAKES</button>
+          </Col>
+          <Col xs="auto">
+            <button>ANIMAL THEME</button>
+          </Col>
+          <Col xs="auto">
+            <button className="mx-2">COOKIES</button>
+          </Col>
+        </div>
+      </section>
+
       <div id="s3-card-container">
         <Row className="justify-content-center">
           <Col xs={6} sm={6} md={6} lg={3}>

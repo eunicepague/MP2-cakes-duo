@@ -7,9 +7,9 @@ const SectionFour = () => {
   return (
     <Container id="s4-container">
       <section id="s4-heading">
-        <h1 id="s4-h1">Sweets and Treats</h1>
+        <h1 id="s4-h1">HELPFUL HOW-TOS</h1>
         <h5 id="s4-h6">
-          Easy cake recipes, fluffy cupcakes and the best cheesecakes!
+          Learn how to frost a perfect cake, decorate cookies and more!
         </h5>
       </section>
 
