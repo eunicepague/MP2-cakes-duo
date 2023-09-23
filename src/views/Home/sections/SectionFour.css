@@ -1,4 +1,4 @@
-#s3-container {
+#s4-container {
   max-width: 1300px;
   height: auto;
   width: 100%;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-#s3-heading {
+#s4-heading {
   height: 20vh;
   width: 100%;
   display: flex;
@@ -19,14 +19,15 @@
   text-align: center;
 }
 
-#s3-h1 {
+#s4-h1 {
   font-weight: bold;
 }
-#s3-h6 {
+
+#s4-h6 {
   font-style: italic;
 }
 
-#s3-card-container {
+#card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,7 +38,7 @@
   margin-bottom: 5rem;
 }
 
-#s3-card-box {
+#card-box {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -74,6 +74,14 @@
 }
 
 @media (max-width: 576px) {
+  #advertisementOne-container {
+    max-width: 1300px;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   #advertisementOne-container img {
     margin-bottom: 3rem;
   }
@@ -91,6 +99,14 @@
 }
 
 @media (max-width: 991px) {
+  #advertisementOne-container {
+    max-width: 1300px;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .advertisementOne-button,
   #advertisementOne-h5,
   #advertisementOne-h1 {

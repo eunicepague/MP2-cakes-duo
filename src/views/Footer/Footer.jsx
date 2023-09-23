@@ -1,10 +1,10 @@
-import { Container, Row, Col, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./Footer.css";
+import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <Container>
+      <Container id="footer-container">
         <Row>
           <Col>
             <h3>Quick Links</h3>
