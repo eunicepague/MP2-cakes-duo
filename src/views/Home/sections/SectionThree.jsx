@@ -1,7 +1,7 @@
 // import React from 'react';
-import { Container, Card, Row, Col } from 'react-bootstrap';
-import './SectionThree.css';
-import Cake from './../../../assets/veganstrawberrycake.jpg';
+import { Container, Card, Row, Col } from "react-bootstrap";
+import "./SectionThree.css";
+import Cake from "./../../../assets/imgs/veganstrawberrycake.jpg";
 
 const SectionThree = () => {
   return (

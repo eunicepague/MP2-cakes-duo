@@ -1,7 +1,7 @@
 // import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import './AdvertisementOne.css';
-import Adds1 from './../../../assets/adds1.jpg';
+import { Container, Row, Col } from "react-bootstrap";
+import "./AdvertisementOne.css";
+import Adds1 from "../../../assets/imgs/adds1.jpg";
 
 const AdvertisementOne = () => {
   return (
@@ -31,7 +31,7 @@ const AdvertisementOne = () => {
                 <h5 id="advertisementOne-h5" className="mb-4 mx-lg-5">
                   Join The First Bite Club to get a taste of our newest treats,
                   invites to exclusive events, and rewards for loving Milk Bar.
-                  Yes, that means we’ll pay you in cake.
+                  Yes, that means we'll pay you in cake.
                 </h5>
                 <button className="advertisementOne-button mx-lg-5">
                   Sign up

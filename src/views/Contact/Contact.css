@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Pacifico&family=Poiret+One&display=swap");
 
+section#contact {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(../../assets/imgs/bgimgcontact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 section#contact .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* margin-top: 100px; */
   padding: 20px;
   max-width: 600px;
   font-weight: 900;
@@ -14,7 +26,7 @@ section#contact .container .card {
   padding: 20px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(110, 106, 106);
+  background-color: rgba(110, 106, 106, 0.7);
 }
 section#contact .container .card .card-title {
   color: white;

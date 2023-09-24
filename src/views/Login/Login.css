@@ -1,5 +1,33 @@
+section#login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url(../../assets/imgs/bgimgsignin2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .container {
   padding: 20px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+}
+section#login .container .card {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+/* --need to fix button as i can't center it or flex-end-- */
+section#login .container .card .card-body button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin: auto; */
+  width: 100px;
 }

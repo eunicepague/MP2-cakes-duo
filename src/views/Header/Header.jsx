@@ -6,7 +6,13 @@ import "./Header.css";
 const Header = () => {
   return (
     <header id="navbar">
-      <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+      <Navbar
+        expand="lg"
+        bg="dark"
+        data-bs-theme="dark"
+        // fixed="top"
+        opacity="0.5"
+      >
         <Container>
           <Navbar.Brand as={Link} to="/">
             MilkBar
@@ -27,11 +33,12 @@ const Header = () => {
                 Contacts
               </Nav.Link>
             </Nav>
-            <Button variant="light" className="btn me-3">
-              <Link to="/login">Log in</Link>
+
+            <Button variant="light" className="btn me-3" as={Link} to="/login">
+              Log in
             </Button>
-            <Button variant="light" className="btn">
-              <Link to="/signup">Sign up</Link>
+            <Button variant="light" className="btn" as={Link} to="/signup">
+              Sign up
             </Button>
           </Navbar.Collapse>
         </Container>
