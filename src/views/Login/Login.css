@@ -1,5 +1,5 @@
 section#login {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +15,11 @@ section#login {
   display: flex;
   justify-content: flex-end;
 }
-section#login .container .card {
-  max-width: 600px;
-  width: 100%;
+section#login .card {
+  /* max-width: 800px; */
+  /* width: 600px; */
+  /* height: 500px; */
+  margin-right: 100px;
   border-radius: 30px;
   padding: 20px;
   background-color: black;
@@ -29,5 +31,4 @@ section#login .container .card .card-body button {
   justify-content: flex-end;
   align-items: center;
   /* margin: auto; */
-  width: 100px;
 }

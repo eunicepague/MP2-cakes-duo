@@ -25,7 +25,6 @@ const Login = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" />
               </Form.Group>
-
               <Button variant="outline-light">Submit</Button>
             </Card.Body>
           </Card>
