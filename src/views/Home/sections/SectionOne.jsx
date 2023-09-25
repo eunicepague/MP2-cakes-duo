@@ -1,6 +1,6 @@
 import { Card, Button, Container } from 'react-bootstrap';
 import { useRef, useEffect, useState } from 'react';
-import Cake from './../../../assets/veganstrawberrycake.jpg';
+import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
 import './sectionOne.css';
 import 'boxicons';
 

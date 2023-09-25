@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poiret+One&display=swap');
-header#navbar .container {
-  height: 90px;
+
+header#navbar .container nav {
+  height: 20px;
+  opacity: 0.5;
 }
 header#navbar a {
   font-family: 'Pacifico', cursive;
@@ -11,7 +13,8 @@ header .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  padding: 10px;
+  width: 150px;
   margin-bottom: 10px;
   font-family: 'Pacifico', cursive;
   background-color: rgb(209, 77, 221);

@@ -1,6 +1,6 @@
 // import React from 'react'
 import { Container, Card, Row, Col } from 'react-bootstrap';
-import Cake from './../../../assets/veganstrawberrycake.jpg';
+import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
 import './SectionFour.css';
 
 const SectionFour = () => {

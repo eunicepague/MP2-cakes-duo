@@ -20,10 +20,7 @@ const Footer = () => {
           </Col>
           <Col>
             <Form>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
+              <Form.Group className="mb-3" controlId="exampleForm.ControlInput">
                 <Form.Label>Subscribe to our newsletter</Form.Label>
                 <Form.Control type="email" placeholder="Email Address" />
               </Form.Group>
