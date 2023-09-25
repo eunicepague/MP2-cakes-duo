@@ -16,7 +16,6 @@ footer .container .row {
   display: flex;
 }
 footer .container .col {
-
   display: flex;
   flex-direction: column;
 }
