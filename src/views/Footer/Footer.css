@@ -3,6 +3,7 @@ footer {
   color: white;
   padding: 20px;
 }
+
 /* ---nag-conflict ang footer .container sa adevertisement css--- */
 footer .container {
   /* height: 100px; */
@@ -15,21 +16,22 @@ footer .container .row {
   display: flex;
 }
 footer .container .col {
+
   display: flex;
   flex-direction: column;
 }
-footer .container .col a {
+footer #footer-container .col a {
   text-decoration: none;
   color: rgb(170, 72, 157);
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-weight: bold;
   font-size: large;
   letter-spacing: 2px;
 }
-footer .container .col a:hover {
+footer #footer-container .col a:hover {
   color: rgb(240, 84, 219);
 }
-footer .container .col .form-control {
+footer #footer-container .col .form-control {
   background-color: gray;
   border-color: none;
 }

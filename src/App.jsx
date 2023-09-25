@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import Header from "./views/Header/Header";
-import Footer from "./views/Footer/Footer";
-import routes from "./routes";
-import "./App.css";
+import { Routes, Route } from 'react-router-dom';
+import Header from './views/Header/Header';
+import Footer from './views/Footer/Footer';
+import routes from './routes';
+import './App.css';
 
 function App() {
   return (
