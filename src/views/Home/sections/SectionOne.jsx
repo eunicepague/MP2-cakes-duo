@@ -1,4 +1,3 @@
-// import React from 'react'
 import { Card, Button, Container } from "react-bootstrap";
 import { useRef, useEffect, useState } from "react";
 import Cake from "./../../../assets/imgs/veganstrawberrycake.jpg";
