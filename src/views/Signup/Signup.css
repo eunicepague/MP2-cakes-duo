@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@600&family=Pacifico&family=Poiret+One&display=swap");
+
+section#signup {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/imgs/bgimgsignin2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section#signup .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin-top: 100px; */
+}
+
+sectin#signup .container .col {
+  max-width: 600px;
+}
+section#signup .container .col .card {
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(143, 10, 110, 0.8);
+  color: white;
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+}
+section#signup .container .col .card button {
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  width: 300px;
+  padding: 15px;
+  font-size: large;
+  background-color: transparent;
+  border-color: black;
+}
+section#signup .container .col .card button:hover {
+  background-color: rgb(75, 16, 236);
+}

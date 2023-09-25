@@ -1,5 +1,5 @@
 .cover {
-  background-image: url('../../../assets/bg-1.jpg');
+  background-image: url("../../../assets/imgs/bg-1.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;

@@ -3,7 +3,20 @@ footer {
   color: white;
   padding: 20px;
 }
-footer #footer-container.col {
+
+/* ---nag-conflict ang footer .container sa adevertisement css--- */
+footer .container {
+  /* height: 100px; */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+footer .container .row {
+  display: flex;
+}
+footer .container .col {
+
   display: flex;
   flex-direction: column;
 }

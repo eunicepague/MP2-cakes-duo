@@ -1,6 +1,6 @@
 #advertisementOne-container {
   max-width: 1300px;
-  height: 90vh;
+  /* height: 90vh; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@
 
 .advertisementOne-button::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 0;
   width: 0;
   top: 0;
