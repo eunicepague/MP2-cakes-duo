@@ -1,16 +1,16 @@
-import { Card, Button, Container } from 'react-bootstrap';
-import { useRef, useEffect, useState } from 'react';
-import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
-import './sectionOne.css';
-import 'boxicons';
+import { Card, Button, Container } from "react-bootstrap";
+import { useRef, useEffect, useState } from "react";
+import Cake from "./../../../assets/imgs/veganstrawberrycake.jpg";
+import "./sectionOne.css";
+import "boxicons";
 
 const SectionOne = () => {
   const cardContainerRef = useRef(null);
-  const [items, setItems] = useState(['BEST RECIPE BOOK EVER']);
+  const [items, setItems] = useState(["BEST RECIPE BOOK EVER"]);
   const speed = 1000;
 
   const addItem = () => {
-    setItems((prevItems) => [...prevItems, 'BEST RECIPE BOOK EVER']);
+    setItems((prevItems) => [...prevItems, "BEST RECIPE BOOK EVER"]);
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const SectionOne = () => {
     if (cardContainerRef.current) {
       cardContainerRef.current.scrollBy({
         left: -100, //scroll distance
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -36,17 +36,17 @@ const SectionOne = () => {
     if (cardContainerRef.current) {
       cardContainerRef.current.scrollBy({
         left: 100, // scroll distance
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
   const marqueeStyle = {
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap",
   };
 
   const spanStyle = {
     // whiteSpace: 'nowrap',
-    marginRight: '10rem', //
+    marginRight: "10rem", //
   };
   return (
     <>
