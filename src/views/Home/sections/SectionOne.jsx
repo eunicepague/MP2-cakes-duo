@@ -60,7 +60,7 @@ const SectionOne = () => {
           ))}
         </marquee>
       </div>
-      <Container>
+      <Container id="s1-container">
         <section id="s1-heading">
           <h1 id="s1-h1">MOST POPULAR RECIPES</h1>
         </section>
