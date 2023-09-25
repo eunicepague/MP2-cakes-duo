@@ -1,4 +1,3 @@
-// import React from 'react'
 import { Card, Button, Container } from 'react-bootstrap';
 import { useRef, useEffect, useState } from 'react';
 import Cake from './../../../assets/veganstrawberrycake.jpg';
@@ -60,7 +59,7 @@ const SectionOne = () => {
           ))}
         </marquee>
       </div>
-      <Container>
+      <Container id="s1-container">
         <section id="s1-heading">
           <h1 id="s1-h1">MOST POPULAR RECIPES</h1>
         </section>
