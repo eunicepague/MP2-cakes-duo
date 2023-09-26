@@ -1,19 +1,28 @@
-import { Card, Button, Container } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { useRef, useEffect, useState } from 'react';
 import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
 import './sectionOne.css';
 import 'boxicons';
+import axios from 'axios';
 
 const SectionOne = () => {
+  const [cakeData, setCakeData] = useState([]);
   const cardContainerRef = useRef(null);
   const [items, setItems] = useState(['BEST RECIPE BOOK EVER']);
   const speed = 1000;
 
-  const addItem = () => {
-    setItems((prevItems) => [...prevItems, 'BEST RECIPE BOOK EVER']);
+  const fetchData = async () => {
+    const { data } = await axios
+      .get('https://cake-backend.vercel.app/api/cake/')
+      .then((response) => response);
+
+    setCakeData(data.all_cake);
   };
 
   useEffect(() => {
+    fetchData();
+    // console.log(fetchData());
+
     const interval = setInterval(() => {
       addItem();
     }, speed);
@@ -22,6 +31,10 @@ const SectionOne = () => {
       clearInterval(interval);
     };
   }, []);
+
+  const addItem = () => {
+    setItems((prevItems) => [...prevItems, 'BEST RECIPE BOOK EVER']);
+  };
 
   const scrollLeft = () => {
     if (cardContainerRef.current) {
@@ -48,6 +61,8 @@ const SectionOne = () => {
     // whiteSpace: 'nowrap',
     marginRight: '10rem', //
   };
+
+  // console.log(cakeData);
   return (
     <>
       <div id="marquee-container">
@@ -66,54 +81,19 @@ const SectionOne = () => {
 
         <div className="carousel-container">
           <div className="card-container" ref={cardContainerRef}>
-            <Card>
-              <Card.Img variant="top" src={Cake} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>Lorem ipsum dolor sit amet.</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src={Cake} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>Lorem ipsum dolor sit amet.</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src={Cake} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>Lorem ipsum dolor sit amet.</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src={Cake} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>Lorem ipsum dolor sit amet.</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src={Cake} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>Lorem ipsum dolor sit amet.</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src={Cake} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>Lorem ipsum dolor sit amet.</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
+            {cakeData.map((cake) => {
+              return (
+                <Card key={cake._id}>
+                  <Card.Img
+                    variant="top"
+                    src={cake.image == null ? Cake : cake.image}
+                  />
+                  <Card.Body id="s1-card-body">
+                    <Card.Title>{cake.title}</Card.Title>
+                  </Card.Body>
+                </Card>
+              );
+            })}
           </div>
           <button className="carousel-button-left" onClick={scrollLeft}>
             <box-icon type="solid" name="left-arrow"></box-icon>
