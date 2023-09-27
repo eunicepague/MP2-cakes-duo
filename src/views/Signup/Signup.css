@@ -13,17 +13,17 @@ section#signup {
   background-repeat: no-repeat;
 }
 
-section#signup .container {
+section#signup #signup-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   /* margin-top: 100px; */
 }
 
-sectin#signup .container .col {
+sectin#signup #signup-container .col {
   max-width: 600px;
 }
-section#signup .container .col .card {
+section#signup #signup-container .col .card {
   width: 100%;
   border-radius: 20px;
   background-color: rgba(143, 10, 110, 0.8);
@@ -31,7 +31,7 @@ section#signup .container .col .card {
   font-family: "Poiret One", cursive;
   font-weight: bolder;
 }
-section#signup .container .col .card button {
+section#signup #signup-container .col .card button {
   display: flex;
   justify-content: center;
   border-radius: 30px;
@@ -41,6 +41,6 @@ section#signup .container .col .card button {
   background-color: transparent;
   border-color: black;
 }
-section#signup .container .col .card button:hover {
+section#signup #signup-container .col .card button:hover {
   background-color: rgb(75, 16, 236);
 }

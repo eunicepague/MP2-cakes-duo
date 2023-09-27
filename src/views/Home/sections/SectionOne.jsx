@@ -1,10 +1,12 @@
 
+
 import { Card, Container } from 'react-bootstrap';
 import { useRef, useEffect, useState } from 'react';
 import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
 import './sectionOne.css';
 import 'boxicons';
 import axios from 'axios';
+
 
 
 const SectionOne = () => {
@@ -14,12 +16,14 @@ const SectionOne = () => {
   const speed = 1000;
 
 
+
   const fetchData = async () => {
     const { data } = await axios
       .get('https://cake-backend.vercel.app/api/cake/')
       .then((response) => response);
 
     setCakeData(data.all_cake);
+
 
   };
 

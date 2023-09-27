@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poiret+One&display=swap");
 
+header#navbar {
+  height: 100%;
+}
 header#navbar .container nav {
   height: 20px;
   opacity: 0.5;

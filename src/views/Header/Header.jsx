@@ -1,7 +1,7 @@
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import 'boxicons';
-import './Header.css';
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "boxicons";
+import "./Header.css";
 
 const Header = () => {
   return (

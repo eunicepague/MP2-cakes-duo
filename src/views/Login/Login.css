@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@600&family=Pacifico&family=Poiret+One&display=swap");
 section#login {
   height: 100%;
   display: flex;
@@ -10,7 +11,7 @@ section#login {
   background-position: center;
   background-repeat: no-repeat;
 }
-.container {
+#login-container {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
@@ -22,13 +23,16 @@ section#login .card {
   margin-right: 100px;
   border-radius: 30px;
   padding: 20px;
-  background-color: black;
+  font-weight: bolder;
+  background-color: rgba(143, 10, 110, 0.8);
+  font-family: "Poiret One", cursive;
   color: white;
 }
 /* --need to fix button as i can't center it or flex-end-- */
-section#login .container .card .card-body button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /* margin: auto; */
+section#login .card .card-body button {
+  border-radius: 20px;
+  width: 100%;
+}
+section#login .card .card-body button.btn {
+  max-width: 400px;
 }
