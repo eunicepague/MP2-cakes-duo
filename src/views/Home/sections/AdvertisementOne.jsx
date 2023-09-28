@@ -1,7 +1,7 @@
 // import React from 'react';
-import { Container, Row, Col } from "react-bootstrap";
-import "./AdvertisementOne.css";
-import Adds1 from "../../../assets/imgs/adds1.jpg";
+import { Container, Row, Col } from 'react-bootstrap';
+import './AdvertisementOne.css';
+import Adds1 from '../../../assets/imgs/adds1.jpg';
 
 const AdvertisementOne = () => {
   return (
