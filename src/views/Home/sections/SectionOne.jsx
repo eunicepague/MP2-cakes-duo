@@ -6,16 +6,16 @@ import 'boxicons';
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
 
-
-
 const SectionOne = () => {
   const navigate = useNavigate();
   const [cakeData, setCakeData] = useState([]);
   const cardContainerRef = useRef(null);
-  const [items, setItems] = useState(["BEST RECIPE BOOK EVER"]);
+  const [items, setItems] = useState(['BEST RECIPE BOOK EVER']);
   const speed = 1000;
 
+
   const id = localStorage.getItem('id');
+
 
   const fetchData = async () => {
     const { data } = await axios
@@ -23,8 +23,6 @@ const SectionOne = () => {
       .then((response) => response);
 
     setCakeData(data.all_cake);
-
-
   };
 
   useEffect(() => {
@@ -48,7 +46,7 @@ const SectionOne = () => {
     if (cardContainerRef.current) {
       cardContainerRef.current.scrollBy({
         left: -100, //scroll distance
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -57,17 +55,17 @@ const SectionOne = () => {
     if (cardContainerRef.current) {
       cardContainerRef.current.scrollBy({
         left: 100, // scroll distance
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
   const marqueeStyle = {
-    whiteSpace: "nowrap",
+    whiteSpace: 'nowrap',
   };
 
   const spanStyle = {
     // whiteSpace: 'nowrap',
-    marginRight: "10rem", //
+    marginRight: '10rem', //
   };
 
 
