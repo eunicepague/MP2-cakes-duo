@@ -3,7 +3,6 @@ footer {
   color: white;
   padding: 20px;
 }
-
 /* ---nag-conflict ang footer .container sa adevertisement css--- */
 footer .container {
   /* height: 100px; */
@@ -22,7 +21,7 @@ footer .container .col {
 footer #footer-container .col a {
   text-decoration: none;
   color: rgb(170, 72, 157);
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-weight: bold;
   font-size: large;
   letter-spacing: 2px;

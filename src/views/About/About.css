@@ -1,0 +1,21 @@
+#about-container {
+  height: auto;
+}
+#about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+#about-chef {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 20rem;
+}
+
+#about-chef img {
+  height: 30rem;
+}

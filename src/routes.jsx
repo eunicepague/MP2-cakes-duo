@@ -4,6 +4,9 @@ import Contact from "./views/Contact/Contact";
 import Pastries from "./views/Cakes/Pastries";
 import Login from "./views/Login/Login";
 import Signup from "./views/Signup/Signup";
+import CakeDescription from './views/Home/sections/CakeDescription';
+import Dashboard from './views/Dashboard/Dashboard';
+import UpdateBoard from "./views/Dashboard/UpdateBoard";
 
 const routes = [
   {
@@ -13,6 +16,10 @@ const routes = [
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/pastries/:id",
+    element: <CakeDescription/>
   },
   {
     path: "/contact",
@@ -29,6 +36,14 @@ const routes = [
   {
     path: "/signup",
     element: <Signup />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "/update/:id",
+    element: <UpdateBoard />,
   },
 ];
 
