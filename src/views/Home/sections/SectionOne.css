@@ -29,6 +29,25 @@
   position: relative;
 }
 
+#s1-card-body {
+  max-width: 100%;
+  padding: 1rem; /* Add padding for spacing */
+}
+
+#s1-card-body .card-title.h5 {
+  max-width: 100%; /* Adjust to the max-width of #s1-card-body */
+  white-space: wrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide the overflowed text */
+  text-overflow: ellipsis; /* Add ellipsis (...) to indicate truncated text */
+  text-align: center;
+}
+
+#carousel-container .card-img,
+#carousel-container .card-img-top {
+  width: 20rem;
+  height: 20rem;
+}
+
 .card {
   flex: 0 0 auto;
   width: 18rem;

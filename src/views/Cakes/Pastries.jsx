@@ -1,7 +1,12 @@
-import React from "react";
+// import React from "react";
+import SectionOne from './sections/SectionOne';
 
 const Pastries = () => {
-  return <div>Pastries</div>;
+  return (
+    <div>
+      <SectionOne />
+    </div>
+  );
 };
 
 export default Pastries;
