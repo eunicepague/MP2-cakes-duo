@@ -1,12 +1,16 @@
 import { Card, Container, Row, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import http from "../../Lib/http";
 import "./Login.css";
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [validated, setValildated] = useState(false);
 
-  function createAccount(event) {
+  async function createAccount(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -16,6 +20,16 @@ const Login = () => {
       return;
     }
     setValildated(true);
+
+    const data = {
+      email,
+      password,
+    };
+    try {
+      const response = await http.post("/login", data);
+      navigate("/");
+      console.log(response);
+    } catch (error) {}
   }
   return (
     <section id="login">
@@ -59,7 +73,14 @@ const Login = () => {
               </Form>
               <hr />
               <Card.Subtitle>Don't have an account yet?</Card.Subtitle>
-              <Button>Sign In</Button>
+              <Button
+                variant="outline-light"
+                className="my-3"
+                as={Link}
+                to="/signup"
+              >
+                Sign In
+              </Button>
             </Card.Body>
           </Card>
         </Row>

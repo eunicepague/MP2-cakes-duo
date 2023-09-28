@@ -1,0 +1,9 @@
+section#about-container {
+  padding: 20px;
+}
+
+section#about-container img {
+  height: 500px;
+  border-radius: 30px;
+  box-shadow: 20px 20px 20px rgb(85, 83, 83);
+}

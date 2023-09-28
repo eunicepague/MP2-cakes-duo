@@ -39,7 +39,9 @@ const Signup = () => {
       const response = await http.post("/register", data);
       navigate("/");
       console.log(response);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
