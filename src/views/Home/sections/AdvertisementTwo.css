@@ -1,51 +1,59 @@
-#advertisementOne-container {
+#advertisementTwo-container {
   max-height: 1300px;
   height: 100vh;
-  /* height: 90vh; */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#advertisementOne-content {
+#advertisementTwo-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#advertisementOne-img-container {
+#advertisementTwo-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-#advertisementOne-img-container img {
+#advertisementTwo-img-container img {
   width: 100%;
   border-radius: 4rem;
   max-height: 40rem;
   max-width: 40rem;
 }
 
-#advertisementOne-h1 {
+#advertisementTwo-h1 {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 3rem;
 }
 
-.advertisementOne-button {
+#advertisementTwo-h6 {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+#advertisementTwo-h6:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.advertisementTwo-button {
   position: relative;
   font-size: 1.3em;
   padding: 1em 1.4em;
-  text-decoration: none;
-  border: none;
+  text-decoration: nTwo;
+  border: nTwo;
   border-radius: 0.5em;
   background-color: #1f1f1f;
   color: #dedede;
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
 }
 
-.advertisementOne-button::before {
+.advertisementTwo-button::before {
   position: absolute;
   content: '';
   height: 0;
@@ -64,18 +72,18 @@
   transition: 0.3s;
 }
 
-.advertisementOne-button:hover::before {
+.advertisementTwo-button:hover::before {
   width: 1.6em;
   height: 1.6em;
 }
 
-.advertisementOne-button:active {
+.advertisementTwo-button:active {
   box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
   transform: translate(0.1em, 0.1em);
 }
 
 @media (max-width: 576px) {
-  #advertisementOne-container {
+  #advertisementTwo-container {
     max-width: 1300px;
     height: 90vh;
     width: 100%;
@@ -83,24 +91,27 @@
     justify-content: center;
     align-items: center;
   }
-  #advertisementOne-img-container img {
+  #advertisementTwo-container img {
     margin-bottom: 3rem;
   }
-  #advertisementOne-h1 {
+  #advertisementTwo-h1 {
     font-size: 2.5rem;
   }
-  #advertisementOne-h5 {
+  #advertisementTwo-h5 {
+    font-size: 1rem;
+  }
+  #advertisementTwo-h6 {
     font-size: 1rem;
   }
 
-  .advertisementOne-button {
+  .advertisementTwo-button {
     font-size: 1em;
     padding: 0.5em 1em;
   }
 }
 
 @media (max-width: 991px) {
-  #advertisementOne-container {
+  #advertisementTwo-container {
     max-width: 1300px;
     height: 90vh;
     width: 100%;
@@ -108,9 +119,10 @@
     justify-content: center;
     align-items: center;
   }
-  .advertisementOne-button,
-  #advertisementOne-h5,
-  #advertisementOne-h1 {
+  .advertisementTwo-button,
+  #advertisementTwo-h5,
+  #advertisementTwo-h1,
+  #advertisementTwo-h6 {
     display: flex;
     justify-content: center;
     text-align: center;
