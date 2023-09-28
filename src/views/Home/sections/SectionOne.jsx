@@ -1,21 +1,21 @@
-
-
 import { Card, Container } from 'react-bootstrap';
 import { useRef, useEffect, useState } from 'react';
 import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
 import './sectionOne.css';
 import 'boxicons';
 import axios from 'axios';
+import {Link, useNavigate} from 'react-router-dom';
 
 
 
 const SectionOne = () => {
+  const navigate = useNavigate();
   const [cakeData, setCakeData] = useState([]);
   const cardContainerRef = useRef(null);
   const [items, setItems] = useState(["BEST RECIPE BOOK EVER"]);
   const speed = 1000;
 
-
+  const id = localStorage.getItem('id');
 
   const fetchData = async () => {
     const { data } = await axios
@@ -70,10 +70,12 @@ const SectionOne = () => {
     marginRight: "10rem", //
   };
 
-  // console.log(cakeData);
+
   return (
     <>
-      <div id="marquee-container">
+    { id == null ? navigate('/login') : (
+      <>
+        <div id="marquee-container">
         <marquee className="s1-marquee" style={marqueeStyle}>
           {items.map((item, index) => (
             <span key={index} style={spanStyle} className="s1-marqueeText">
@@ -92,13 +94,15 @@ const SectionOne = () => {
             {cakeData.map((cake) => {
               return (
                 <Card key={cake._id}>
-                  <Card.Img
-                    variant="top"
-                    src={cake.image == null ? Cake : cake.image}
-                  />
-                  <Card.Body id="s1-card-body">
-                    <Card.Title>{cake.title}</Card.Title>
-                  </Card.Body>
+                  <Link to={`/pastries/${cake._id}`}>
+                    <Card.Img
+                      variant="top"
+                      src={cake.image == null ? Cake : cake.image}
+                    />
+                    <Card.Body id="s1-card-body">
+                      <Card.Title>{cake.title}</Card.Title>
+                    </Card.Body>
+                  </Link>
                 </Card>
               );
             })}
@@ -111,6 +115,10 @@ const SectionOne = () => {
           </button>
         </div>
       </Container>
+      </>
+    )
+    }
+      
     </>
   );
 };

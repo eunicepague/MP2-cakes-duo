@@ -1,8 +1,9 @@
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import http from "../../Lib/http";
+// import http from "../../Lib/http";
 import "./Signup.css";
+import axios from "axios";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -35,11 +36,38 @@ const Signup = () => {
       password,
       confirmPassword,
     };
+
     try {
-      const response = await http.post("/register", data);
-      navigate("/");
-      console.log(response);
-    } catch (error) {}
+
+      fetch(`https://cake-backend.vercel.app/api/user/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(response => {
+        if(response.data){
+
+          // console.log(response)
+          // localStorage.setItem('id', response.data._id)
+          // localStorage.setItem('email', response.data.email)
+          // localStorage.setItem('isAdmin', response.data.isAdmin)
+
+          alert(`${response.message}`);
+
+          navigate('/login')
+        } else {
+          alert(`${response.email_exists}` || "Email already exists. Please login instead.")
+        }
+      })
+
+
+    } catch (error) {
+        console.log(error.message)
+    }
+
   }
 
   return (
