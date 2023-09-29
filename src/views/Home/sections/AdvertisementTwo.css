@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 #advertisementTwo-container {
   max-height: 1300px;
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -17,19 +20,25 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* Remove margin-bottom: 20rem; */
+  height: 40rem; /* Add a fixed height */
 }
 
 #advertisementTwo-img-container img {
   width: 100%;
   border-radius: 4rem;
-  max-height: 40rem;
-  max-width: 40rem;
+  max-height: 100%; /* Adjust max-height to fill the container */
+  max-width: 100%;
+}
+#advertisementTwo-text {
+  height: auto;
 }
 
 #advertisementTwo-h1 {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 3rem;
+  font-family: 'Pacifico', cursive;
 }
 
 #advertisementTwo-h6 {

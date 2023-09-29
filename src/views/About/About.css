@@ -1,9 +1,21 @@
-section#about-container {
-  padding: 20px;
+#about-container {
+  height: auto;
+}
+#about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
 }
 
-section#about-container img {
-  height: 500px;
-  border-radius: 30px;
-  box-shadow: 20px 20px 20px rgb(85, 83, 83);
+#about-chef {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 20rem;
+}
+
+#about-chef img {
+  height: 30rem;
 }

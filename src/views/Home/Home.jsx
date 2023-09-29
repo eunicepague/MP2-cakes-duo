@@ -2,7 +2,7 @@
 import Hero from './sections/Hero';
 import SectionOne from './sections/SectionOne';
 import SectionThree from './sections/SectionThree';
-import AdvertisementOne from './sections/AdvertisementOne';
+// import AdvertisementOne from './sections/AdvertisementOne';
 import SectionFour from './sections/SectionFour';
 import AdvertisementTwo from './sections/AdvertisementTwo';
 
@@ -15,7 +15,7 @@ const Home = () => {
       <AdvertisementTwo />
 
       <SectionFour />
-      <AdvertisementOne />
+      {/* <AdvertisementOne /> */}
     </div>
   );
 };

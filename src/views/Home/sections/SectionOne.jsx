@@ -1,19 +1,37 @@
+<<<<<<< HEAD
 import { Card, Container } from "react-bootstrap";
 import { useRef, useEffect, useState } from "react";
 import Cake from "./../../../assets/imgs/veganstrawberrycake.jpg";
 import "./sectionOne.css";
 import "boxicons";
 import axios from "axios";
+=======
+import { Card, Container } from 'react-bootstrap';
+import { useRef, useEffect, useState } from 'react';
+import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
+import './sectionOne.css';
+import 'boxicons';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+>>>>>>> f6446cc1faaa4ed3067155318ee4a1e898e9722c
 
 const SectionOne = () => {
+  const navigate = useNavigate();
   const [cakeData, setCakeData] = useState([]);
   const cardContainerRef = useRef(null);
   const [items, setItems] = useState(["BEST RECIPE BOOK EVER"]);
   const speed = 1000;
 
+  const id = localStorage.getItem('id');
+
   const fetchData = async () => {
+<<<<<<< HEAD
     const data = await axios
       .get("https://cake-backend.vercel.app/api/cake/")
+=======
+    const { data } = await axios
+      .get('https://cake-backend-63mn.vercel.app/api/cake/')
+>>>>>>> f6446cc1faaa4ed3067155318ee4a1e898e9722c
       .then((response) => response);
 
     setCakeData(data.all_cake);
@@ -32,7 +50,11 @@ const SectionOne = () => {
   }, []);
 
   const addItem = () => {
+<<<<<<< HEAD
     setItems((prevItems) => [...prevItems, "BEST RECIPE BOOK EVER"]);
+=======
+    setItems((prevItems) => ['😋🍰BEST CAKE RECIPE EVER😋🍰', ...prevItems]);
+>>>>>>> f6446cc1faaa4ed3067155318ee4a1e898e9722c
   };
 
   const scrollLeft = () => {
@@ -64,44 +86,52 @@ const SectionOne = () => {
   // console.log(cakeData);
   return (
     <>
-      <div id="marquee-container">
-        <marquee className="s1-marquee" style={marqueeStyle}>
-          {items.map((item, index) => (
-            <span key={index} style={spanStyle} className="s1-marqueeText">
-              {item}
-            </span>
-          ))}
-        </marquee>
-      </div>
-      <Container id="s1-container">
-        <section id="s1-heading">
-          <h1 id="s1-h1">MOST POPULAR RECIPES</h1>
-        </section>
-
-        <div className="carousel-container">
-          <div className="card-container" ref={cardContainerRef}>
-            {cakeData.map((cake) => {
-              return (
-                <Card key={cake._id}>
-                  <Card.Img
-                    variant="top"
-                    src={cake.image == null ? Cake : cake.image}
-                  />
-                  <Card.Body id="s1-card-body">
-                    <Card.Title>{cake.title}</Card.Title>
-                  </Card.Body>
-                </Card>
-              );
-            })}
+      {id == null ? (
+        navigate('/login')
+      ) : (
+        <>
+          <div id="marquee-container">
+            <marquee className="s1-marquee" style={marqueeStyle}>
+              {items.map((item, index) => (
+                <span key={index} style={spanStyle} className="s1-marqueeText">
+                  {item}
+                </span>
+              ))}
+            </marquee>
           </div>
-          <button className="carousel-button-left" onClick={scrollLeft}>
-            <box-icon type="solid" name="left-arrow"></box-icon>
-          </button>
-          <button className="carousel-button-right" onClick={scrollRight}>
-            <box-icon name="right-arrow" type="solid"></box-icon>
-          </button>
-        </div>
-      </Container>
+          <Container id="s1-container">
+            <section id="s1-heading">
+              <h1 id="s1-h1">MOST POPULAR RECIPES</h1>
+            </section>
+
+            <div className="carousel-container">
+              <div className="card-container" ref={cardContainerRef}>
+                {cakeData.slice(0, 7).map((cake) => {
+                  return (
+                    <Card key={cake._id}>
+                      <Link to={`/pastries/${cake._id}`}>
+                        <Card.Img
+                          variant="top"
+                          src={cake.image == null ? Cake : cake.image}
+                        />
+                        <Card.Body id="s1-card-body">
+                          <Card.Title>{cake.title}</Card.Title>
+                        </Card.Body>
+                      </Link>
+                    </Card>
+                  );
+                })}
+              </div>
+              <button className="carousel-button-left" onClick={scrollLeft}>
+                <box-icon type="solid" name="left-arrow"></box-icon>
+              </button>
+              <button className="carousel-button-right" onClick={scrollRight}>
+                <box-icon name="right-arrow" type="solid"></box-icon>
+              </button>
+            </div>
+          </Container>
+        </>
+      )}
     </>
   );
 };

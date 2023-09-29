@@ -4,13 +4,15 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import http from "../../Lib/http";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [validated, setValildated] = useState(false);
 
-  async function createAccount(event) {
+  async function loginAccount(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -25,12 +27,38 @@ const Login = () => {
       email,
       password,
     };
+
     try {
-      const response = await http.post("/login", data);
-      navigate("/");
-      console.log(response);
-    } catch (error) {}
+      fetch(`http://localhost:4000/api/user/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          if (response._id) {
+            console.log(response);
+
+            localStorage.setItem("id", response._id);
+            localStorage.setItem("email", response.email);
+            localStorage.setItem("isAdmin", response.isAdmin);
+
+            alert("Login successful!");
+
+            navigate("/");
+          } else if (response.message) {
+            alert(`${response.message}`);
+          } else {
+            alert(`Something went wrong. Please try again`);
+          }
+        });
+    } catch (error) {
+      console.log(error.message);
+    }
   }
+
   return (
     <section id="login">
       <Container id="login-container">
@@ -40,7 +68,7 @@ const Login = () => {
               <Card.Title>
                 <h2>Log In</h2>
               </Card.Title>
-              <Form noValidate validated={validated} onSubmit={createAccount}>
+              <Form onSubmit={loginAccount}>
                 <Form.Group
                   required
                   className="mb-3"
@@ -67,9 +95,10 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </Form.Group>
-                <Form.Group className=" d-flex justify-content-center">
-                  <Button variant="outline-light">Submit</Button>
-                </Form.Group>
+                <hr />
+                <Button type="submit" className="mx-auto">
+                  Sign in
+                </Button>
               </Form>
               <hr />
               <Card.Subtitle>Don't have an account yet?</Card.Subtitle>
