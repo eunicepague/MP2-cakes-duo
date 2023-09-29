@@ -12,15 +12,12 @@ const SectionOne = () => {
   const speed = 1000;
 
   const fetchData = async () => {
-    const { data } = await axios
+    const data = await axios
       .get("https://cake-backend.vercel.app/api/cake/")
       .then((response) => response);
 
     setCakeData(data.all_cake);
   };
-
-  setCakeData(data.all_cake);
-
   useEffect(() => {
     fetchData();
     // console.log(fetchData());
