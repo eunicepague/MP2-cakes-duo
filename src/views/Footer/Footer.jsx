@@ -1,6 +1,6 @@
-import { Container, Row, Col, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import { Container, Row, Col, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -15,9 +15,24 @@ const Footer = () => {
             <Link to="/contact">Contacts</Link>
           </Col>
           <Col>
-            <h3>Social Media</h3>
-            <Link to=""></Link>
-            <Link to=""></Link>
+            <h3 id="socmed">Social Media</h3>
+            <p>Facebook</p>
+            <p>Discord</p>
+            <p>Instagram</p>
+            <p>Twitter/X</p>
+            {/* <Link to="#">
+              <box-icon
+                name="facebook-circle"
+                type="logo"
+                color="#fff7f7"
+              ></box-icon>
+            </Link>
+            <Link to="#">
+              <box-icon name="discord-alt" type="logo" color="#ffffff">
+                Discord
+              </box-icon>
+            </Link>
+            <box-icon name="instagram" type="logo" color="#ffffff"></box-icon> */}
           </Col>
           <Col>
             <Form>
@@ -29,7 +44,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <p>&copy; 2023. All rights reserved.</p>
+      <p className="copy">&copy; 2023. All rights reserved.</p>
     </footer>
   );
 };

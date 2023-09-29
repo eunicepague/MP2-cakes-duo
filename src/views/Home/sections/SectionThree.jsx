@@ -1,17 +1,19 @@
 // import React from 'react';
-import { Container, Card, Row, Col } from 'react-bootstrap';
-import './SectionThree.css';
-import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
-import axios from 'axios';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Container, Card, Row, Col } from "react-bootstrap";
+import "./SectionThree.css";
+import Cake from "./../../../assets/imgs/veganstrawberrycake.jpg";
+import axios from "axios";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SectionThree = () => {
   const [cakeData, setCakeData] = useState([]);
-  const [val, setVal] = useState('');
+  const [val, setVal] = useState("");
 
   const handleData = async () => {
-    const { data } = await axios.get(`http://localhost:4000/api/cake`);
+    const { data } = await axios.get(
+      `https://cake-backend-63mn.vercel.app/api/cake`
+    );
     // console.log(data.all_cake)
 
     setCakeData(data.all_cake);
@@ -35,7 +37,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'bars and brownies'}
+              value={"bars and brownies"}
               onClick={(e) => setVal(e.target.value)}
             >
               BARS AND BROWNIES
@@ -44,7 +46,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'cupcakes'}
+              value={"cupcakes"}
               onClick={(e) => setVal(e.target.value)}
             >
               CUPCAKES
@@ -53,7 +55,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'NO BAKE DESSERTS'}
+              value={"NO BAKE DESSERTS"}
               onClick={(e) => setVal(e.target.value)}
             >
               NO BAKE DESSERTS
@@ -62,7 +64,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'Cheesecake'}
+              value={"Cheesecake"}
               onClick={(e) => setVal(e.target.value)}
             >
               CHEESECAKES
@@ -71,7 +73,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'animals'}
+              value={"animals"}
               onClick={(e) => setVal(e.target.value)}
             >
               ANIMAL THEME
@@ -80,7 +82,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'COOKIES'}
+              value={"COOKIES"}
               onClick={(e) => setVal(e.target.value)}
             >
               COOKIES
@@ -89,7 +91,7 @@ const SectionThree = () => {
           <Col xs="auto">
             <button
               className="mx-2"
-              value={'cake'}
+              value={"cake"}
               onClick={(e) => setVal(e.target.value)}
             >
               CAKES
@@ -101,7 +103,7 @@ const SectionThree = () => {
       <div id="s3-card-container">
         <Row className="justify-content-center">
           {cakeData?.map((cake) => {
-            if (val == '') {
+            if (val == "") {
               return (
                 <Col xs={6} sm={4} md={4} lg={3} key={cake._id}>
                   <Link to={`/pastries/${cake._id}`}>

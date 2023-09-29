@@ -1,16 +1,18 @@
-import { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 // import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
-import './CakeDescription.css';
-import axios from 'axios';
+import "./CakeDescription.css";
+import axios from "axios";
 function CakeDescription() {
   const { id } = useParams();
   const [cake, setCake] = useState({});
 
   useEffect(() => {
     const handleData = async () => {
-      const { data } = await axios.get(`http://localhost:4000/api/cake/${id}`);
+      const { data } = await axios.get(
+        `https://cake-backend-63mn.vercel.app/api/cake/${id}`
+      );
       console.log(data.cake_by_id);
 
       setCake(data.cake_by_id);
@@ -39,23 +41,23 @@ function CakeDescription() {
               <p id="cake-description-h1">{cake?.title}</p>
 
               <p>
-                <span style={{ fontWeight: 'bold' }}>Prep Time: </span>
+                <span style={{ fontWeight: "bold" }}>Prep Time: </span>
                 {cake?.time}
               </p>
               <p>
-                <span style={{ fontWeight: 'bold' }}>Yield: </span>
+                <span style={{ fontWeight: "bold" }}>Yield: </span>
                 {cake?.portion}
               </p>
               <p>
-                <span style={{ fontWeight: 'bold' }}>Category: </span>
-                {cake?.category?.join(', ')}
+                <span style={{ fontWeight: "bold" }}>Category: </span>
+                {cake?.category?.join(", ")}
               </p>
               <p>
-                <span style={{ fontWeight: 'bold' }}>Method: </span>
+                <span style={{ fontWeight: "bold" }}>Method: </span>
                 {cake?.type}
               </p>
               <p>
-                <span style={{ fontWeight: 'bold' }}>Cuisine: </span>
+                <span style={{ fontWeight: "bold" }}>Cuisine: </span>
                 {cake?.cuisine}
               </p>
               <div id="cake-description-buttons">

@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 import { Card, Container } from "react-bootstrap";
 import { useRef, useEffect, useState } from "react";
 import Cake from "./../../../assets/imgs/veganstrawberrycake.jpg";
 import "./sectionOne.css";
 import "boxicons";
 import axios from "axios";
-=======
-import { Card, Container } from 'react-bootstrap';
-import { useRef, useEffect, useState } from 'react';
-import Cake from './../../../assets/imgs/veganstrawberrycake.jpg';
-import './sectionOne.css';
-import 'boxicons';
-import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
->>>>>>> f6446cc1faaa4ed3067155318ee4a1e898e9722c
+import { Link, useNavigate } from "react-router-dom";
 
 const SectionOne = () => {
   const navigate = useNavigate();
@@ -22,16 +13,11 @@ const SectionOne = () => {
   const [items, setItems] = useState(["BEST RECIPE BOOK EVER"]);
   const speed = 1000;
 
-  const id = localStorage.getItem('id');
+  const id = localStorage.getItem("id");
 
   const fetchData = async () => {
-<<<<<<< HEAD
-    const data = await axios
-      .get("https://cake-backend.vercel.app/api/cake/")
-=======
     const { data } = await axios
-      .get('https://cake-backend-63mn.vercel.app/api/cake/')
->>>>>>> f6446cc1faaa4ed3067155318ee4a1e898e9722c
+      .get("https://cake-backend-63mn.vercel.app/api/cake/")
       .then((response) => response);
 
     setCakeData(data.all_cake);
@@ -50,11 +36,7 @@ const SectionOne = () => {
   }, []);
 
   const addItem = () => {
-<<<<<<< HEAD
-    setItems((prevItems) => [...prevItems, "BEST RECIPE BOOK EVER"]);
-=======
-    setItems((prevItems) => ['😋🍰BEST CAKE RECIPE EVER😋🍰', ...prevItems]);
->>>>>>> f6446cc1faaa4ed3067155318ee4a1e898e9722c
+    setItems((prevItems) => ["😋🍰BEST CAKE RECIPE EVER😋🍰", ...prevItems]);
   };
 
   const scrollLeft = () => {
@@ -87,7 +69,7 @@ const SectionOne = () => {
   return (
     <>
       {id == null ? (
-        navigate('/login')
+        navigate("/login")
       ) : (
         <>
           <div id="marquee-container">

@@ -1,7 +1,6 @@
 import { Card, Container, Row, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import http from "../../Lib/http";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
@@ -29,7 +28,7 @@ const Login = () => {
     };
 
     try {
-      fetch(`http://localhost:4000/api/user/login`, {
+      fetch(`https://cake-backend.vercel.app/api/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +67,7 @@ const Login = () => {
               <Card.Title>
                 <h2>Log In</h2>
               </Card.Title>
-              <Form onSubmit={loginAccount}>
+              <Form noValidate validated={validated} onSubmit={loginAccount}>
                 <Form.Group
                   required
                   className="mb-3"
@@ -108,7 +107,7 @@ const Login = () => {
                 as={Link}
                 to="/signup"
               >
-                Sign In
+                Sign Up
               </Button>
             </Card.Body>
           </Card>
